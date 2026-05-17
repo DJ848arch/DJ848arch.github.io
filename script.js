@@ -27,7 +27,7 @@ const tools = [
     { name: "LM Studio", category: "local", desc: "Discover, download, and run local LLMs easily.", url: "https://lmstudio.ai/", tags: ["LOCAL"] },
     { name: "Cursor", category: "coding", desc: "The AI-first code editor for extreme productivity.", url: "https://cursor.com/", tags: ["HOT", "APP"] },
     { name: "Bolt.new", category: "coding", desc: "Build and deploy full-stack apps from a prompt.", url: "https://bolt.new/", tags: ["CODING", "WEB"] },
-    { name: "Midjourney", category: "video", desc: "High-fidelity AI image generation via Discord.", url: "https://www.midjourney.com", tags: ["IMAGE"] },
+    { name: "Midjourney", category: "video", desc: "High-fidelity AI image generation via Discord.", url: "https://www.midjourney.com/", tags: ["IMAGE"] },
     { name: "Runway", category: "video", desc: "Professional AI video generation and editing suite.", url: "https://runwayml.com/", tags: ["VIDEO", "PRO"] },
     { name: "HeyGen", category: "video", desc: "Realistic AI avatars for professional video production.", url: "https://www.heygen.com/", tags: ["VIDEO", "AVATAR"] }
 ];
