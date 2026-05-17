@@ -1,27 +1,65 @@
 const tools = [
+    // --- FEATURED ---
     { name: "Atoms.dev", category: "coding", desc: "Build modern UIs faster with AI-powered components and templates.", url: "https://atoms.dev/?utm_source=affiliate&via=daniel-johnson" },
-    { name: "Canva AI", category: "image", desc: "Design anything with AI-powered Magic Media and photo editing tools.", url: "https://www.canva.com" },
-    { name: "HubSpot AI", category: "productivity", desc: "AI-powered CRM and marketing tools to automate your business growth.", url: "https://www.hubspot.com/?hubs_content=www.hubspot.com/partners/affiliates&hubs_content-cta=HubSpot" },
-    { name: "Notion AI", category: "productivity", desc: "AI-powered workspace for notes and organization.", url: "https://affiliate.notion.so/" },
-    { name: "Semrush", category: "writing", desc: "AI SEO and marketing platform to boost your search rankings and traffic.", url: "https://www.semrush.com/partner-program/affiliate/" },
-    { name: "GetResponse AI", category: "productivity", desc: "AI email marketing and automation to grow your audience.", url: "https://www.getresponse.com/affiliates" },
-    { name: "Copy.ai", category: "writing", desc: "The AI platform that helps marketing teams write better content faster.", url: "https://www.copy.ai/" },
-    { name: "SurferSEO", category: "writing", desc: "AI-driven content optimization to help your articles rank #1 on Google.", url: "https://surferseo.com/" },
-    { name: "Pictory AI", category: "image", desc: "Automatically create short, highly-shareable branded videos from your long form content.", url: "https://pictory.ai/partner-with-pictory" },
-    { name: "Viktor.ai", category: "coding", desc: "Build and distribute powerful web apps for engineering and CAD workflows.", url: "https://www.viktor.ai/start-now" },
-    { name: "Blink AI", category: "coding", desc: "The all-in-one app creation platform for AI-native entrepreneurs and developers.", url: "https://blink.new/?utm_source=meta&utm_medium=paid&utm_campaign=App+Builder+-+US+-+Scale+-+04.27.2026+-+Copy&utm_content=did-you-know-build-ai-app-captioned+-+Copy&utm_id=120246712631170744&utm_term=120246712666730744" },
-    { name: "One Shot AI", category: "productivity", desc: "Ultra-precise AI trading signals for every market, directly inside TradingView.", url: "https://oneshotalgo.com/?rqz9pt9q=ly1fl3a7&utm_medium=paid&utm_source=ig&utm_id=120247574726490483&utm_content=120247829327940483&utm_term=120247656624080483&utm_campaign=120247574726490483&twrclid=182698940271955968" },
-    { name: "Made This AI", category: "productivity", desc: "Create high-quality AI content and automation solutions.", url: "https://www.madethis.com/?utm_source=ig&utm_medium=Instagram_Reels&utm_campaign=L0408&utm_content=v1&utm_id=52626285952530&utm_term=52626285952330" },
-    { name: "ChatGPT", category: "writing", desc: "Advanced language model for chat and content creation.", url: "https://openai.com/chatgpt" },
-    { name: "Jasper", category: "writing", desc: "Professional AI content platform for marketing and business teams.", url: "https://www.jasper.ai/partners/solutions" },
-    { name: "OutlierKit", category: "productivity", desc: "Powerful AI tools for content creators and YouTubers to grow their reach.", url: "https://outlierkit.com/p/affiliate" },
+    { name: "Notion AI", category: "productivity", desc: "The all-in-one AI workspace for your notes, docs, and projects.", url: "https://www.notion.com/" },
+
+    // --- AGENTIC AI ---
+    { name: "CrewAI", category: "agents", desc: "Framework for orchestrating role-playing, autonomous AI agents.", url: "https://www.crewai.com/" },
+    { name: "Taskade AI Agents", category: "agents", desc: "Automate your workflows with multi-agent AI teams.", url: "https://www.taskade.com/ai/agents" },
+    { name: "Flowise AI", category: "agents", desc: "Drag & drop UI to build your customized LLM orchestration flow.", url: "https://flowiseai.com/" },
+    { name: "AgentOps", category: "agents", desc: "Observability and tracking for your AI agents.", url: "https://www.agentops.ai/" },
+    { name: "Dify", category: "agents", desc: "Open-source LLM application development platform.", url: "https://dify.ai/" },
+
+    // --- LOCAL / OFFLINE AI ---
+    { name: "LM Studio", category: "local", desc: "Run any open-source LLM locally on your computer, offline.", url: "https://lmstudio.ai/" },
+    { name: "Ollama", category: "local", desc: "Get up and running with large language models locally.", url: "https://ollama.com/" },
+    { name: "AnythingLLM", category: "local", desc: "Full-stack desktop AI assistant that runs locally.", url: "https://useanything.com/" },
+    { name: "Pinokio", category: "local", desc: "The browser that lets you install and run any AI app with one click.", url: "https://pinokio.computer/" },
+    { name: "Jan AI", category: "local", desc: "Turn your computer into an AI-powered workstation.", url: "https://jan.ai/" },
+
+    // --- DESIGN / CAD / 3D ---
+    { name: "Viktor.ai", category: "design", desc: "Build and distribute web apps for engineering and CAD workflows.", url: "https://www.viktor.ai/start-now" },
+    { name: "Spline AI", category: "design", desc: "Generate 3D objects, animations, and textures using prompts.", url: "https://spline.design/ai" },
+    { name: "Meshy AI", category: "design", desc: "The fastest 3D AI generator for gaming and creative assets.", url: "https://www.meshy.ai/" },
+    { name: "Kaedim", category: "design", desc: "Convert 2D images to 3D models automatically with AI.", url: "https://www.kaedim3d.com/" },
+
+    // --- VIDEO / IMAGE ---
+    { name: "HeyGen", category: "video", desc: "Create professional AI videos with life-like avatars in minutes.", url: "https://www.heygen.com/" },
+    { name: "Synthesia", category: "video", desc: "AI video generation platform using realistic AI avatars.", url: "https://www.synthesia.io/" },
+    { name: "Opus Clip", category: "video", desc: "Turn long videos into viral short clips with one click.", url: "https://www.opus.pro/" },
+    { name: "Descript", category: "video", desc: "AI-powered video and podcast editing like a word doc.", url: "https://www.descript.com/" },
+    { name: "Midjourney", category: "video", desc: "Top-tier AI image generation via Discord.", url: "https://www.midjourney.com" },
+    { name: "Canva AI", category: "video", desc: "Magic Media tools for photos and video design.", url: "https://www.canva.com" },
+    { name: "Pictory AI", category: "video", desc: "Automatically create short branded videos from long-form content.", url: "https://pictory.ai/partner-with-pictory" },
+
+    // --- API / ROUTERS ---
+    { name: "OpenRouter", category: "api", desc: "One API for every LLM. Compare models and switch instantly.", url: "https://openrouter.ai/" },
+    { name: "Groq", category: "api", desc: "LPU Inference Engine—the world's fastest LLM inference.", url: "https://groq.com/" },
+    { name: "Replicate", category: "api", desc: "Run AI models with a cloud API.", url: "https://replicate.com/" },
+
+    // --- CODING ---
+    { name: "Cursor", category: "coding", desc: "The AI-first code editor built for maximum productivity.", url: "https://cursor.com/" },
+    { name: "Bolt.new", category: "coding", desc: "Build, run, and deploy full-stack web apps from a prompt.", url: "https://bolt.new/" },
+    { name: "GitHub Copilot", category: "coding", desc: "Your AI pair programmer integrated in your IDE.", url: "https://github.com/features/copilot" },
+    { name: "Blink AI", category: "coding", desc: "The app creation platform for AI-native developers.", url: "https://blink.new/" },
+
+    // --- SECURITY ---
+    { name: "Snyk AI", category: "security", desc: "Find and fix vulnerabilities in your code using AI.", url: "https://snyk.io/product/snyk-code/" },
+    { name: "Dropzone AI", category: "security", desc: "AI-powered SOC analyst that investigates every alert.", url: "https://www.dropzone.ai/" },
+
+    // --- PRODUCTIVITY ---
+    { name: "HubSpot AI", category: "productivity", desc: "AI-powered CRM and marketing tools to automate business growth.", url: "https://www.hubspot.com/" },
+    { name: "Mem AI", category: "productivity", desc: "The self-organizing workspace that thinks for you.", url: "https://mem.ai/" },
+    { name: "Motion", category: "productivity", desc: "AI that automatically plans your day and schedule.", url: "https://www.usemotion.com/" },
+    { name: "Rewind AI", category: "productivity", desc: "The search engine for your life—record what you see and hear.", url: "https://www.rewind.ai/" },
     { name: "Systeme.io", category: "productivity", desc: "The easiest all-in-one marketing platform for your online business.", url: "https://systeme.io/" },
-    { name: "Midjourney", category: "image", desc: "Stunning AI art generation from text prompts.", url: "https://www.midjourney.com" },
-    { name: "GitHub Copilot", category: "coding", desc: "Your AI pair programmer for writing code faster.", url: "https://github.com/features/copilot" },
-    { name: "Claude", category: "writing", desc: "Helpful and safe AI assistant for complex tasks.", url: "https://claude.ai" },
-    { name: "Writesonic", category: "writing", desc: "AI writer that creates SEO-friendly content for blogs, Facebook ads, and Google ads.", url: "https://writesonic.com/affiliate" },
-    { name: "Grammarly", category: "writing", desc: "AI-powered writing assistant that makes your messages, documents, and posts clear.", url: "https://www.grammarly.com/affiliates" },
-    { name: "AdCreative.ai", category: "productivity", desc: "Generate conversion-focused ad creatives in seconds.", url: "https://www.adcreative.ai/" }
+
+    // --- WRITING ---
+    { name: "ChatGPT", category: "writing", desc: "OpenAI's legendary conversational AI.", url: "https://openai.com/chatgpt" },
+    { name: "Copy.ai", category: "writing", desc: "AI platform for high-converting marketing copy.", url: "https://www.copy.ai/" },
+    { name: "Jasper", category: "writing", desc: "Professional AI content platform for marketing and business teams.", url: "https://www.jasper.ai/partners/solutions" },
+    { name: "SurferSEO", category: "writing", desc: "AI-driven content optimization to help your articles rank #1 on Google.", url: "https://surferseo.com/" },
+    { name: "Grammarly", category: "writing", desc: "AI-powered writing assistant for clear, professional messages.", url: "https://www.grammarly.com/affiliates" }
 ];
 
 const toolGrid = document.getElementById('toolGrid');
