@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hub - Discover the Best AI Tools</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI Hub</h1>
+            <p>The curated directory for your next favorite AI tool.</p>
+            <div class="search-container">
+                <input type="text" id="toolSearch" placeholder="Search for tools (e.g., 'image generator')...">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="writing">Writing</button>
+            <button class="filter-btn" data-category="image">Image Gen</button>
+            <button class="filter-btn" data-category="coding">Coding</button>
+            <button class="filter-btn" data-category="productivity">Productivity</button>
+        </section>
+
+        <div class="tool-grid" id="toolGrid">
+            <!-- Tools will be injected here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 0.8rem; margin-bottom: 20px; opacity: 0.7;">
+                Disclosure: Some of the links on this website are affiliate links. This means if you click on the link and purchase the item, I will receive an affiliate commission at no extra cost to you.
+            </p>
+            <p>&copy; 2024 AI Hub. Built with ❤️ for AI enthusiasts.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
