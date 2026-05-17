@@ -1,5 +1,5 @@
 const tools = [
-    { name: "Atoms.dev", category: "coding", desc: "Build modern UIs faster with AI-powered components and templates.", url: "https://atoms.dev/?utm_source=affiliate&via=daniel-johnson", tags: ["FEATURED", "WEB"], featured: true },
+    { name: "Atoms.dev", category: "coding", desc: "Build modern UIs faster with AI-powered components and templates.", url: "https://atoms.dev/?via=daniel", tags: ["FEATURED", "WEB"], featured: true },
     { name: "Notion AI", category: "productivity", desc: "The all-in-one AI workspace for your notes, docs, and projects.", url: "https://www.notion.com/", tags: ["WEB", "APP"], featured: true },
     { name: "Suno", category: "music", desc: "Create high-quality, full-length songs from text prompts.", url: "https://suno.com/", tags: ["HOT", "MUSIC"], featured: true },
     { name: "Udio", category: "music", desc: "State-of-the-art AI music generation with high fidelity.", url: "https://www.udio.com/", tags: ["NEW", "MUSIC"] },
@@ -25,7 +25,7 @@ const tools = [
     { name: "Dify", category: "agents", desc: "Open-source LLM application development platform.", url: "https://dify.ai/", tags: ["AGENTS", "OSS"] },
     { name: "Ollama", category: "local", desc: "Run large language models locally on your hardware.", url: "https://ollama.com/", tags: ["LOCAL", "FREE"] },
     { name: "LM Studio", category: "local", desc: "Discover, download, and run local LLMs easily.", url: "https://lmstudio.ai/", tags: ["LOCAL"] },
-    { name: "Cursor", category: "coding", desc: "The AI-first code editor for extreme productivity.", url: "https://cursor.com/", tags: ["CODING", "APP"] },
+    { name: "Cursor", category: "coding", desc: "The AI-first code editor for extreme productivity.", url: "https://cursor.com/", tags: ["HOT", "APP"] },
     { name: "Bolt.new", category: "coding", desc: "Build and deploy full-stack apps from a prompt.", url: "https://bolt.new/", tags: ["CODING", "WEB"] },
     { name: "Midjourney", category: "video", desc: "High-fidelity AI image generation via Discord.", url: "https://www.midjourney.com", tags: ["IMAGE"] },
     { name: "Runway", category: "video", desc: "Professional AI video generation and editing suite.", url: "https://runwayml.com/", tags: ["VIDEO", "PRO"] },
