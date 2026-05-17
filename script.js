@@ -1,61 +1,50 @@
 const tools = [
     // --- FEATURED ---
     { name: "Atoms.dev", category: "coding", desc: "Build modern UIs faster with AI-powered components and templates.", url: "https://atoms.dev/?utm_source=affiliate&via=daniel-johnson" },
-    { name: "Notion AI", category: "writing", desc: "The all-in-one AI workspace for your notes, docs, and projects.", url: "https://www.notion.com/" },
+    { name: "Notion AI", category: "productivity", desc: "The all-in-one AI workspace for your notes, docs, and projects.", url: "https://www.notion.com/" },
 
-    // --- BROWSER CONTROL / COMPUTER USE ---
-    { name: "Browser Use", category: "browser", desc: "Connect LLMs to any website to perform tasks like a human.", url: "https://browser-use.com/" },
-    { name: "MultiOn", category: "browser", desc: "Personal AI agent that can navigate the web and take actions for you.", url: "https://www.multion.ai/" },
-    { name: "OpenInterpreter", category: "browser", desc: "An open-source, local-first interpreter that lets AI control your computer.", url: "https://openinterpreter.com/" },
-    { name: "Skyvern", category: "browser", desc: "Automate browser-based workflows using AI agents.", url: "https://www.skyvern.com/" },
+    // --- MUSIC GENERATION (music) ---
+    { name: "Suno", category: "music", desc: "Create high-quality, full-length songs from text prompts.", url: "https://suno.com/" },
+    { name: "Udio", category: "music", desc: "State-of-the-art AI music generation with high fidelity.", url: "https://www.udio.com/" },
+    { name: "AIVA", category: "music", desc: "AI music composition for films, games, and media.", url: "https://www.aiva.ai/" },
+    { name: "Boomy", category: "music", desc: "Make generative music and share it with the world.", url: "https://boomy.com/" },
+    { name: "Soundraw", category: "music", desc: "AI music generator for content creators and artists.", url: "https://soundraw.io/" },
+    { name: "Beatoven AI", category: "music", desc: "Create royalty-free mood-based music for your videos.", url: "https://www.beatoven.ai/" },
+    { name: "Stable Audio", category: "music", desc: "Stability AI's model for high-quality audio and music generation.", url: "https://stableaudio.com/" },
+    { name: "Orb Producer Suite", category: "music", desc: "AI MIDI plugins for professional music production.", url: "https://www.orb-composer.com/" },
 
-    // --- INFRASTRUCTURE / DEVOPS ---
-    { name: "RunPod", category: "infrastructure", desc: "Cloud GPU platform for training and scaling AI models.", url: "https://www.runpod.io/" },
-    { name: "Lepton AI", category: "infrastructure", desc: "Build and deploy AI applications in minutes, not weeks.", url: "https://www.lepton.ai/" },
-    { name: "Unsloth AI", category: "infrastructure", desc: "Fine-tune LLMs 2-5x faster and with 70% less memory.", url: "https://unsloth.ai/" },
-    { name: "OctoAI", category: "infrastructure", desc: "The fastest way to run, tune, and scale your AI models.", url: "https://octo.ai/" },
-    { name: "Banana.dev", category: "infrastructure", desc: "Serverless GPU hosting for production-scale AI models.", url: "https://www.banana.dev/" },
+    // --- VOICE / VOCALS (voice) ---
+    { name: "ElevenLabs", category: "voice", desc: "The gold standard for AI voice synthesis and cloning.", url: "https://elevenlabs.io/" },
+    { name: "Kits AI", category: "voice", desc: "AI voice platform designed specifically for musicians.", url: "https://www.kits.ai/" },
+    { name: "Voicify AI", category: "voice", desc: "Create AI music covers with your favorite voices.", url: "https://www.voicify.ai/" },
+    { name: "PlayHT", category: "voice", desc: "Realistic AI voice generator for any use case.", url: "https://play.ht/" },
+    { name: "Synthesizer V", category: "voice", desc: "High-end vocal synthesis for realistic singing performances.", url: "https://dreamtonics.com/synthesizerv/" },
 
-    // --- GAME DEV ---
-    { name: "Scenario.gg", category: "games", desc: "AI-generated game assets that stay consistent with your art style.", url: "https://www.scenario.com/" },
-    { name: "Rosebud AI", category: "games", desc: "Create entire games from a prompt—text-to-game platform.", url: "https://www.rosebud.ai/" },
-    { name: "Inworld AI", category: "games", desc: "AI-powered NPCs with personality and memory for virtual worlds.", url: "https://inworld.ai/" },
-    { name: "Ludo AI", category: "games", desc: "The creative assistant for game designers—generate ideas and research.", url: "https://ludo.ai/" },
+    // --- AUDIO PRO / TOOLS (audio-pro) ---
+    { name: "LALAL.AI", category: "audio-pro", desc: "World-class stem separation (vocals, drums, bass, instruments).", url: "https://www.lalal.ai/" },
+    { name: "Moises", category: "audio-pro", desc: "The musician's app for stem separation and practice tools.", url: "https://moises.ai/" },
+    { name: "LANDR", category: "audio-pro", desc: "Industry-standard AI mastering and distribution platform.", url: "https://www.landr.com/" },
+    { name: "iZotope", category: "audio-pro", desc: "AI-powered mixing and mastering plugins for professional producers.", url: "https://www.izotope.com/" },
+    { name: "Ultimate Vocal Remover", category: "audio-pro", desc: "The best open-source tool for high-quality stem separation.", url: "https://ultimatevocalremover.com/" },
+    { name: "DJ.Studio", category: "audio-pro", desc: "AI-powered DAW for DJs to create professional mixes faster.", url: "https://dj.studio/" },
+    { name: "Chartmetric", category: "audio-pro", desc: "AI-driven music data analytics for independent artists.", url: "https://chartmetric.com/" },
 
-    // --- DATA / ML ---
-    { name: "Gretel AI", category: "data", desc: "Safe, synthetic data to train your models without privacy risks.", url: "https://gretel.ai/" },
-    { name: "Snorkel AI", category: "data", desc: "Programmatic data labeling for faster machine learning development.", url: "https://snorkel.ai/" },
-    { name: "Mostly AI", category: "data", desc: "Generate realistic synthetic data for testing and development.", url: "https://mostly.ai/" },
-
-    // --- AGENTS ---
+    // --- AGENTIC AI (agents) ---
     { name: "CrewAI", category: "agents", desc: "Framework for orchestrating autonomous AI agents.", url: "https://www.crewai.com/" },
     { name: "Dify", category: "agents", desc: "Open-source LLM application development platform.", url: "https://dify.ai/" },
-    { name: "Taskade AI", category: "agents", desc: "Productivity platform with built-in multi-agent workflows.", url: "https://www.taskade.com/" },
 
-    // --- DESIGN / CAD ---
-    { name: "Uizard", category: "design", desc: "Design mobile apps and websites in minutes with AI.", url: "https://uizard.io/" },
-    { name: "Galileo AI", category: "design", desc: "Generative AI for interface design—text to high-fidelity UI.", url: "https://www.usegalileo.ai/" },
-    { name: "Spline AI", category: "design", desc: "3D design and collaboration platform with AI power.", url: "https://spline.design/ai" },
-    { name: "Meshy AI", category: "design", desc: "AI-powered 3D asset generation for creative professionals.", url: "https://www.meshy.ai/" },
-
-    // --- LOCAL AI ---
-    { name: "Ollama", category: "local", desc: "Run large language models locally on macOS, Linux, and Windows.", url: "https://ollama.com/" },
+    // --- LOCAL AI (local) ---
+    { name: "Ollama", category: "local", desc: "Run large language models locally on your hardware.", url: "https://ollama.com/" },
     { name: "LM Studio", category: "local", desc: "Discover, download, and run local LLMs easily.", url: "https://lmstudio.ai/" },
-    { name: "Jan AI", category: "local", desc: "Turn your computer into a private AI workstation.", url: "https://jan.ai/" },
 
-    // --- FINANCE / LEGAL ---
-    { name: "FinChat", category: "finance", desc: "ChatGPT for finance—investment research on public companies.", url: "https://finchat.io/" },
-    { name: "Harvey AI", category: "legal", desc: "Professional AI for elite law firms.", url: "https://www.harvey.ai/" },
+    // --- CODING ---
+    { name: "Cursor", category: "coding", desc: "The AI-first code editor for extreme productivity.", url: "https://cursor.com/" },
+    { name: "Bolt.new", category: "coding", desc: "Build and deploy full-stack apps from a prompt.", url: "https://bolt.new/" },
 
-    // --- WRITING / STORYTELLING ---
-    { name: "Sudowrite", category: "writing", desc: "The non-judgmental AI writing partner for fiction authors.", url: "https://www.sudowrite.com/" },
-    { name: "NovelAI", category: "writing", desc: "AI-assisted storytelling and image generation.", url: "https://novelai.net/" },
-    { name: "ChatGPT", category: "writing", desc: "OpenAI's legendary conversational assistant.", url: "https://openai.com/chatgpt" },
-    
-    // --- AUTOMATION / PROMPT ---
-    { name: "PromptLayer", category: "automation", desc: "The first platform to manage and track your AI prompts.", url: "https://promptlayer.com/" },
-    { name: "LangFuse", category: "automation", desc: "Open source observability and analytics for LLM apps.", url: "https://langfuse.com/" },
-    { name: "Make", category: "automation", desc: "Visually build complex AI automations.", url: "https://www.make.com/" }
+    // --- VIDEO / IMAGE ---
+    { name: "Midjourney", category: "video", desc: "High-fidelity AI image generation via Discord.", url: "https://www.midjourney.com" },
+    { name: "Runway", category: "video", desc: "Professional AI video generation and editing suite.", url: "https://runwayml.com/" },
+    { name: "HeyGen", category: "video", desc: "Realistic AI avatars for professional video production.", url: "https://www.heygen.com/" }
 ];
 
 const toolGrid = document.getElementById('toolGrid');
