@@ -19,9 +19,10 @@ const categoryNames = {
     video: "Video/Image"
 };
 
-// --- RENDER CATEGORIES ---
 function renderCategories() {
     const nav = document.getElementById('categoryList');
+    if (!nav) return;
+
     const counts = tools.reduce((acc, tool) => {
         acc[tool.category] = (acc[tool.category] || 0) + 1;
         return acc;
@@ -32,19 +33,23 @@ function renderCategories() {
         if (id === 'all') continue;
         html += `<button class="filter-btn" data-category="${id}">${label} (${counts[id] || 0})</button>`;
     }
+
     nav.innerHTML = html;
     setupFilterListeners();
 }
 
-// --- RENDER TOOLS ---
 function displayTools(filter = 'all', searchTerm = '') {
     const toolGrid = document.getElementById('toolGrid');
     const featuredGrid = document.getElementById('featuredGrid');
-    
-    // Filter logic
-    let filtered = tools.filter(t => {
+    const featuredSection = document.querySelector('.featured-section');
+
+    if (!toolGrid) return;
+
+    const filtered = tools.filter(t => {
         const matchesFilter = filter === 'all' || t.category === filter;
-        const matchesSearch = t.name.toLowerCase().includes(searchTerm.toLowerCase()) || t.desc.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesSearch =
+            t.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            t.desc.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesFilter && matchesSearch;
     });
 
@@ -59,48 +64,62 @@ function displayTools(filter = 'all', searchTerm = '') {
             <div class="badge-row">
                 ${tool.tags.map(tag => `<span class="badge ${tag.toLowerCase()}">${tag}</span>`).join('')}
             </div>
-            <a href="${tool.url}" target="_blank" class="view-link">Open Tool →</a>
+            <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="view-link">Open Tool →</a>
         </div>
     `;
 
-    // Only show Featured section when on "All" and no search
     if (filter === 'all' && searchTerm === '') {
-        document.querySelector('.featured-section').style.display = 'block';
-        featuredGrid.innerHTML = tools.filter(t => t.featured).map(createCard).join('');
+        if (featuredSection) featuredSection.style.display = 'block';
+        if (featuredGrid) {
+            featuredGrid.innerHTML = tools.filter(t => t.featured).map(createCard).join('');
+        }
         toolGrid.innerHTML = tools.filter(t => !t.featured).map(createCard).join('');
     } else {
-        document.querySelector('.featured-section').style.display = 'none';
+        if (featuredSection) featuredSection.style.display = 'none';
         toolGrid.innerHTML = filtered.map(createCard).join('');
     }
 }
 
-// --- LISTENERS ---
 function setupFilterListeners() {
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+
             const cat = btn.getAttribute('data-category');
-            document.getElementById('currentCategoryTitle').innerText = categoryNames[cat];
-            displayTools(cat, document.getElementById('toolSearch').value);
+            const title = document.getElementById('currentCategoryTitle');
+            if (title) title.innerText = categoryNames[cat] || 'Tools';
+
+            const searchInput = document.getElementById('toolSearch');
+            const searchValue = searchInput ? searchInput.value : '';
+
+            displayTools(cat, searchValue);
         });
     });
 }
 
-document.getElementById('toolSearch').addEventListener('input', (e) => {
-    const activeCat = document.querySelector('.filter-btn.active').getAttribute('data-category');
-    displayTools(activeCat, e.target.value);
-});
+function setupSearch() {
+    const searchInput = document.getElementById('toolSearch');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const activeBtn = document.querySelector('.filter-btn.active');
+            const activeCat = activeBtn ? activeBtn.getAttribute('data-category') : 'all';
+            displayTools(activeCat, e.target.value);
+        });
+    }
 
-// Suggested Search tags
-document.querySelectorAll('.search-tag').forEach(tag => {
-    tag.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.getElementById('toolSearch').value = tag.innerText;
-        displayTools('all', tag.innerText);
+    document.querySelectorAll('.search-tag').forEach(tag => {
+        tag.addEventListener('click', (e) => {
+            e.preventDefault();
+            const term = tag.innerText.trim();
+            if (searchInput) searchInput.value = term;
+            displayTools('all', term);
+        });
     });
-});
+}
 
-// Init
-renderCategories();
-displayTools();
+document.addEventListener('DOMContentLoaded', () => {
+    renderCategories();
+    displayTools();
+    setupSearch();
+});
