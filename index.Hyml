@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hub | Discover & Orchestrate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="hero">
+                <h1>AI Hub</h1>
+                <p class="subtitle">The indexed ecosystem for professional AI workflows.</p>
+                
+                <div class="search-wrapper">
+                    <input type="text" id="toolSearch" placeholder="Search 100+ tools (e.g. 'coding agents')...">
+                    <div class="suggested-searches">
+                        <span>Try:</span>
+                        <a href="#" class="search-tag">Suno</a>
+                        <a href="#" class="search-tag">Local LLMs</a>
+                        <a href="#" class="search-tag">Agents</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container scroll-x" id="categoryList">
+            <!-- Categories with counts injected by JS -->
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Featured Section -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2>🔥 Featured & Trending</h2>
+            </div>
+            <div class="featured-grid" id="featuredGrid">
+                <!-- Featured tools injected here -->
+            </div>
+        </section>
+
+        <!-- Main Directory -->
+        <section class="directory-section">
+            <div class="section-header">
+                <h2 id="currentCategoryTitle">All Tools</h2>
+            </div>
+            <div class="tool-grid" id="toolGrid">
+                <!-- Standard tools injected here -->
+            </div>
+        </section>
+
+        <section id="submit-box">
+            <div class="submit-card">
+                <h2>Submit a Tool</h2>
+                <p>Reviewed by humans. Indexed for professionals.</p>
+                <form>
+                    <input type="text" placeholder="Tool Name">
+                    <input type="url" placeholder="Website URL">
+                    <button type="button">Submit to Index</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Indexed with ❤️ for the technical AI community. &copy; 2024 AI Hub.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
