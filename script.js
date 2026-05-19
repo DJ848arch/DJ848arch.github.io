@@ -6,6 +6,7 @@ const tools = [
     { name: "ElevenLabs", category: "voice", desc: "Advanced AI voice synthesis.", url: "https://elevenlabs.io", tags: ["API", "PRO"] },
     { name: "Ollama", category: "local", desc: "Run LLMs locally on your machine.", url: "https://ollama.com", tags: ["FREE", "LOCAL"] },
     { name: "Cursor", category: "coding", desc: "AI-first code editor for pair programming.", url: "https://cursor.com", tags: ["HOT", "APP"] },
+    { name: "Aurcue", category: "video", desc: "AI personal style assistant for color analysis, outfits, hairstyles, and glasses.", url: "https://www.aurcue.com", tags: ["WEB", "FREE"] },
     { name: "HeyGen", category: "video", desc: "Realistic AI video avatars.", url: "https://heygen.com", tags: ["API", "PRO"] }
 ];
 
